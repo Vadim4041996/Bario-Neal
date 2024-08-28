@@ -1,0 +1,107 @@
+
+
+// CTA-Header
+.cta-header {
+    background-color: $blueColor;
+    padding-block: toRem(10);
+    // .cta-header__container
+    &__container {
+        display: flex;
+        gap: toRem(24);
+        align-items: center;
+        justify-content: center;
+
+        font-size: toRem(12);
+        line-height: 1.4;
+        color: #111111;
+    } 
+
+    // .cta-header__more-link  
+    // .cta-header__reviews-link
+    &__more-link,
+    &__reviews-link {
+        @media(any-hover:hover) {
+            &:hover {
+                span{
+                    &::after {
+                        width: 100%
+                    }
+                }
+            }
+        }
+        span {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: toRem(1);
+            &::after {
+                content: '';
+                width: 0;
+                height: toRem(1);
+                background-color: $blackColor;
+                transition: all .3s;
+            }
+        }
+    }
+
+    // .cta-header__more-link
+    &__more-link {}
+
+    // .cta-header__reviews-link
+    &__reviews-link {} 
+}
+
+// Body-Header
+.body-header {
+    background-color: $lightColor;
+    padding-top: toRem(24);
+    padding-bottom: toRem(26);
+    // .body-header__container
+    &__container {
+    }
+
+    // .body-header__menu
+    &__menu {
+    }
+
+    // .body-header__list
+    &__list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: toRem(20);
+        row-gap: toRem(10);
+        font-size: toRem(14);
+        @media(min-width: toEm(768)) {
+            gap: toRem(60);
+            letter-spacing: toRem(0.28);
+            line-height: 1.5;
+        }
+    }
+
+    // .body-header__item
+    &__item {
+    }
+
+    // .body-header__link
+    &__link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(1);
+        @media(any-hover:hover) {
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+        &::after {
+            content: '';
+            width: 0;
+            height: toRem(1);
+            background-color: $blackColor;
+            transition: all .3s;
+        }
+    }
+}

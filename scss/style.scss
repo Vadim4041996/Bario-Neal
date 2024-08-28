@@ -1,0 +1,42 @@
+@use "sass:math";
+
+/* ===================================================== */
+@import "_icons.scss";
+@import "_fonts.scss";
+@import "_reset.scss";
+@import "_variables.scss";
+@import "_mixins.scss";
+@import "_common.scss";
+@import "_keyframes.scss";
+
+@import "_header.scss";
+@import "_hero.scss";
+@import "_category.scss";
+@import "_blog-section.scss"; 
+@import "_about.scss"; 
+@import "_custom.scss"; 
+@import "_slider.scss";
+@import "_footer.scss";
+
+
+/* =================================================== */
+
+body {
+    font-family: 'Roboto', sans-serif;  
+}                
+
+.wrapper {
+    min-height: 100%;
+    overflow: clip;
+    display: flex;
+    flex-direction: column; 
+    main {
+        flex-grow: 1; 
+    } 
+}
+
+[class*="__container"] {
+    max-width: toRem($containerWidth);
+    padding-inline: toRem(15);
+    margin: 0 auto;
+}

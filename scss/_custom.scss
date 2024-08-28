@@ -1,0 +1,77 @@
+
+// Page
+.page {
+
+    // .page__section-custom
+    &__section-custom {
+        min-height: unset;
+        // blog-section__container
+        .blog-section__container {
+            position: relative;
+            justify-content: space-between;
+            gap: toRem(10);
+            @media(max-width: toEm(991)) {
+                align-items: center;
+            }
+            // blog-section__image
+            .blog-section__image {
+                position: absolute;
+                @media(max-width: toEm(767)) {
+                    padding: toRem(15);
+                    top: 50%;
+                    left: toRem(15);
+                    transform: translateY(-50%);
+                    opacity: 0.6;
+                }
+                @media(min-width: toEm(768)) {
+                    position: static;
+                    height: unset;
+                    display: flex;
+                }
+                @media(min-width: toEm(992)) {
+                    padding-top: toRem(50);
+                    padding-bottom: toRem(84);
+                    width: 44%;
+                }
+                img {
+                    aspect-ratio: 480 / 302;
+                    object-fit: contain;
+                    width: 100%;
+                    height: 100%;
+                    @media(min-width: toEm(768)) {
+                        height: unset;
+                    }
+                }
+            }
+
+            // blog-section__body
+            .blog-section__body {
+                max-width: 100%;
+                z-index: 2;
+                @media(min-width: toEm(768)) {
+                    max-width: 42%;
+                }
+                // blog-section__body-inner
+                .blog-section__body-inner {
+                    gap: toRem(51);
+                }
+                // blog-section__buttons
+                .blog-section__buttons {
+                    flex-direction: column;
+                    @media(min-width: toEm(1024)) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                    }
+                    // blog-section__button
+                    .blog-section__button {
+                        @media(max-width: toEm(1024)) {
+                            width: 70%;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+}
+

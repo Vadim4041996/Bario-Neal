@@ -1,0 +1,96 @@
+
+
+// Slider
+.slider {
+    margin: toRem(20) auto toRem(30);
+    max-width: toRem(1200);
+    
+    // .slider__container
+    &__container {
+
+    }
+    // .slider__swiper
+    &__swiper {
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: toRem(10);
+    }
+
+    // .slider__swiper-wrapper
+    &__swiper-wrapper {
+        display: flex;
+        gap: toRem(5);
+    }
+
+    // .slider__swiper-slide
+    &__swiper-slide {
+        flex-shrink: 0;
+        width: unset;
+    }
+
+    // .slider__img
+    &__img {
+        flex-shrink: 0;
+        aspect-ratio: 280 / 300;
+        object-fit: cover;
+        width: 100%;
+    }
+
+		// .slider__buttons
+		&__buttons {
+            display: flex;
+            align-items: center;
+            gap: toRem(30);
+		}
+
+		// .slider__button-prev
+		&__button-prev,
+        &__button-next {
+            width: toRem(50);
+            height: toRem(50);
+            border-radius: 50%;
+            background-color: $lightBlueColor;
+            position: relative;
+            transition: background-color .3s;
+            @media(any-hover:hover) {
+                &:hover {
+                    background-color: $greenColor;
+                }
+            }
+            span {
+                display: inline-block;
+                width: 70%;
+                height: toRem(3);
+                background-color: $blackColor;
+                border-radius: toRem(25);
+                position: absolute;
+                top: 50%;
+                right: 15%;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    background-color: transparent;
+                    top: 50%;
+                    right: -6%;
+                    left: unset;
+                    transform: translateY(-50%);
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 8px 0 8px 14px;
+                    border-radius: 0;
+                    border-color: transparent transparent transparent $blackColor;
+                }
+            }
+		}
+
+        // .slider__button-prev
+        &__button-prev{
+            transform: scaleX(-1);
+        }
+
+		// .slider__button-next
+		&__button-next {}
+}

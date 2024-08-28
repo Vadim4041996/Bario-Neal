@@ -1,0 +1,24 @@
+
+// Налаштування адаптивної сітки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1920;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1090;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+
+// COLOR
+$greenColor: #98B7A4;
+$blueColor: #CFE1E7;
+$lightBlueColor: #CFE1E6;
+$beigeColor: #E5DFD3;
+$lightColor: #F9F6F0;
+$whiteColor: #fff;
+$blackColor: #000;
+$redColor: #ff0000;
+

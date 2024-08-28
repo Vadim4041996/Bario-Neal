@@ -1,0 +1,152 @@
+
+// Footer
+.footer {
+    background-color: $lightColor;
+    padding-top: toRem(80);
+    padding-bottom: toRem(48);
+    @media(min-width: toEm(992)) {
+        padding-top: toRem(143);
+    }
+    // .footer__container
+    &__container {   
+        display: flex;
+        flex-direction: column;
+        gap: toRem(30);
+        @media(min-width: toEm(992)) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__three-columns,
+    &__subscription,
+    &__two-columns {
+        @media(min-width: toEm(992)) {
+            flex: 1 1 toRem(350);
+        }
+    }
+
+    // .footer__three-columns
+    &__three-columns {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: toRem(22);
+        @media(min-width: toEm(550)) {
+            display: flex;
+            flex-direction: column;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        @media(min-width: toEm(1024)) {
+            gap: toRem(42);
+        }
+        @media(min-width: toEm(992)) {
+            justify-content: flex-start;
+        }
+        @media(max-width: toEm(991)) {
+            order: 2;   
+        }
+    }
+
+    // .footer__column-inner
+    &__column-inner {
+        flex-shrink: 1 1 toRem(100);
+        >*:not(:last-child) {
+            margin-bottom: toRem(10);
+        }
+    }
+
+    // .footer__column-sub-title
+    &__column-sub-title {
+        @media(max-width: toEm(549)) {
+            font-size: toRem(22);
+        }
+    }
+
+    // .footer__column-list
+    &__column-list {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.2;
+        gap: toRem(7);
+        font-size: toRem(14);
+    }
+
+    // .footer__column-item
+    &__column-item {
+    }
+
+    // .footer__column-link
+    &__column-link {
+        @media(any-hover:hover) {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // .footer__subscription
+    &__subscription {
+        display: flex;
+        flex-direction: column;
+        gap: toRem(24);
+        
+        @media(max-width: toEm(991)) {
+            order: 1;   
+        }
+    }
+
+    // .footer__title
+    &__title {
+    }
+
+    // .footer__form
+    &__form {
+        display: flex;
+        color: #333;
+        line-height: 1.26;
+        position: relative;
+        @media(min-width: toEm(550)) and (max-width: toEm(991)) {
+            width: 70%;
+            align-self: center;
+        }
+    }
+
+    // .footer__input
+    &__input {
+        width: 100%;
+        border: toRem(1) solid rgba(0, 0, 0, 0.50);    
+        background: $whiteColor;
+        border-radius: toRem(20);
+        padding: toRem(3) toRem(100) toRem(3) toRem(12);
+    }
+
+    // .footer__button
+    &__button {
+        padding: toRem(4) toRem(24);
+        background-color: $greenColor;
+        border: toRem(1) solid rgba(0, 0, 0, 0.50);
+
+        position: absolute;
+        top: toRem(0);
+        right: 0;
+    }
+
+    // .footer__two-columns
+    &__two-columns {
+        display: flex;
+        justify-content: space-between;
+        gap: toRem(22);
+        @media(min-width: toEm(992)) {
+            justify-content: flex-end;
+        }
+        @media(max-width: toEm(991)) {
+            display: none;
+        }
+        @media(min-width: toEm(1024)) {
+            gap: toRem(42);
+        }
+    }
+}
+
+
